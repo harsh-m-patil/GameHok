@@ -23,7 +23,7 @@ export default function TournamentDashboard() {
     const fetchTournaments = async () => {
       try {
         setIsLoading(true)
-        const response = await fetch("/api/tournaments")
+        const response = await fetch(`http://localhost:8080/api/v1/tournaments`)
 
         if (!response.ok) {
           throw new Error("Failed to fetch tournaments")
@@ -46,6 +46,7 @@ export default function TournamentDashboard() {
     const filtered = tournaments.filter((tournament) => {
       const matchesStatus =
         activeTab === "upcoming" ? tournament.status === "Upcoming" : tournament.status === "Completed"
+
 
       const matchesSearch =
         tournament.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

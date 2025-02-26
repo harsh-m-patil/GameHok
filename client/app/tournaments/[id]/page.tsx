@@ -18,7 +18,7 @@ export default function TournamentDetails({ params }: { params: { id: string } }
     const fetchTournamentDetails = async () => {
       try {
         setIsLoading(true)
-        const response = await fetch(`/api/tournaments/${params.id}`)
+        const response = await fetch(`http://localhost:8080/api/v1/tournaments/${params.id}`)
 
         if (!response.ok) {
           throw new Error("Failed to fetch tournament details")
@@ -75,7 +75,7 @@ export default function TournamentDetails({ params }: { params: { id: string } }
 
   const formattedPrize = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "INR",
     maximumFractionDigits: 0,
   }).format(tournament.prizePool)
 

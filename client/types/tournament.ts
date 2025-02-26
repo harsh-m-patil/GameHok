@@ -4,12 +4,7 @@ export interface Tournament {
   game: string
   date: string
   prizePool: number
-  status: "Upcoming" | "Completed"
+  status?: "Upcoming" | "Completed"
   description?: string
-  rules?: string[]
-  prizeBreakdown?: {
-    position: string
-    amount: number
-  }[]
 }
 
