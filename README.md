@@ -3,6 +3,17 @@
 ## Overview
 GameHok Tournament Platform is a full-stack web application that enables users to view and manage gaming tournaments. The project consists of a **Next.js** frontend and a **Spring Boot** backend with **PostgreSQL** as the database.
 
+## ScreenShots
+
+### Home Page
+![Home page](./assets/home.png) 
+
+### Details Page
+![Details Page](./assets/tournament.png) 
+
+### Dark Mode
+![Dark Mode](./assets/dark.png) 
+
 ## Tech Stack
 
 ### Frontend:
