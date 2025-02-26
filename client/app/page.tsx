@@ -50,7 +50,7 @@ export default function TournamentDashboard() {
 
       const matchesSearch =
         tournament.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tournament.game.toLowerCase().includes(searchQuery.toLowerCase())
+        tournament.gameName.toLowerCase().includes(searchQuery.toLowerCase())
 
       return matchesStatus && matchesSearch
     })

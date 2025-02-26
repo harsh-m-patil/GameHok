@@ -13,7 +13,7 @@ interface TournamentCardProps {
 }
 
 export default function TournamentCard({ tournament }: TournamentCardProps) {
-  const { id, title, game, date, prizePool, status } = tournament
+  const { id, title, gameName, date, prizePool, status } = tournament
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -34,7 +34,7 @@ export default function TournamentCard({ tournament }: TournamentCardProps) {
           <div className="flex justify-between items-start">
             <div>
               <h3 className="font-bold text-xl line-clamp-2">{title}</h3>
-              <p className="text-muted-foreground text-sm mt-1">{game}</p>
+              <p className="text-muted-foreground text-sm mt-1">{gameName}</p>
             </div>
             <Badge
               variant={status === "Upcoming" ? "default" : "secondary"}
